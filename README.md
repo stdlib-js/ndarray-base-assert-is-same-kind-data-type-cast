@@ -49,7 +49,7 @@ npm install @stdlib/ndarray-base-assert-is-same-kind-data-type-cast
 ## Usage
 
 ```javascript
-var isSameKindCast = require( '@stdlib/ndarray-base-assert-is-same-kind/data/type-cast' );
+var isSameKindCast = require( '@stdlib/ndarray-base-assert-is-same-kind-data-type-cast' );
 ```
 
 #### isSameKindCast( from, to )
@@ -86,7 +86,7 @@ bool = isSameKindCast( 'uint16', 'int16' );
 
 ```javascript
 var dtypes = require( '@stdlib/ndarray-dtypes' );
-var isSameKindCast = require( '@stdlib/ndarray-base-assert-is-same-kind/data/type-cast' );
+var isSameKindCast = require( '@stdlib/ndarray-base-assert-is-same-kind-data-type-cast' );
 
 var DTYPES;
 var bool;

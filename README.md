@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import isSameKindCast from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-assert-is-same-kind-data-type-cast@esm/index.mjs';
+import isSameKindCast from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-assert-is-same-kind-data-type-cast@v0.1.0-esm/index.mjs';
 ```
 
 #### isSameKindCast( from, to )
@@ -94,7 +94,7 @@ bool = isSameKindCast( 'uint16', 'int16' );
 <script type="module">
 
 import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-dtypes@esm/index.mjs';
-import isSameKindCast from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-assert-is-same-kind-data-type-cast@esm/index.mjs';
+import isSameKindCast from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-assert-is-same-kind-data-type-cast@v0.1.0-esm/index.mjs';
 
 var DTYPES;
 var bool;

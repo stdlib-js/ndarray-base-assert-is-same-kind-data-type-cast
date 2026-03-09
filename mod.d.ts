@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2021 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,27 +16,18 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var sameKindCasts = require( '@stdlib/ndarray-same-kind-casts' );
-var resolveStr = require( '@stdlib/ndarray-base-dtype-resolve-str' );
-
-
-// VARIABLES //
-
-var TABLE = sameKindCasts();
-
-
-// MAIN //
+import { DataType } from '@stdlib/types/ndarray';
 
 /**
 * Returns a boolean indicating if a provided ndarray data type can be safely cast to, or is of the same "kind" as, another ndarray data type.
 *
-* @param {*} from - ndarray data type
-* @param {*} to - ndarray data type
-* @returns {boolean} boolean indicating if a data type can be cast to another data type
+* @param from - ndarray data type
+* @param to - ndarray data type
+* @returns boolean indicating if a data type can be cast to another data type
 *
 * @example
 * var bool = isSameKindCast( 'float32', 'float64' );
@@ -45,21 +36,9 @@ var TABLE = sameKindCasts();
 * bool = isSameKindCast( 'uint16', 'int16' );
 * // returns false
 */
-function isSameKindCast( from, to ) {
-	var t;
-	from = resolveStr( from );
-	to = resolveStr( to );
-	if ( from === to ) { // note: for "struct" data types, require strict equality to be considered a safe cast
-		return true;
-	}
-	t = TABLE[ from ];
-	if ( t ) {
-		return t[ to ] > 0;
-	}
-	return false;
-}
+declare function isSameKindCast( from: DataType, to: DataType ): boolean;
 
 
 // EXPORTS //
 
-module.exports = isSameKindCast;
+export = isSameKindCast;
